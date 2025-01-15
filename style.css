@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.cart {
+  flex: 1;
+  padding: 2rem;
+  background-color: rgb(249, 221, 188);
+  padding-top: 170px;
+}
+
+.cart-content {
+  display: flex;
+  gap: 2rem;
+}
+/* .cart-items{
+  display: flex;
+  justify-content: space-between;
+} */
+
+.cart-items,
+.cart-totals {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  gap: 15px;
+}
+
+.cart-items {
+  flex: 3;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 10px;
+}
+
+.cart-item img {
+  width: 110px;
+  height: auto;
+}
+
+.cart-totals {
+  flex: 1;
+}
+
+.checkout-btn {
+  background-color: #593939;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: rgb(71, 31, 31);
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #333;
+  height: 90px;
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .cart-content {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+}
+
+/* Media query for large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav a {
+    font-size: 18px;
+  }
+}
+
+/* Media query for medium screens (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav {
+    gap: 15px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .header div {
+    gap: 15px;
+  }
+}
+
+/* Media query for small screens (up to 767px) */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .header div {
+    justify-content: center;
+    gap: 10px;
+  }
+}
